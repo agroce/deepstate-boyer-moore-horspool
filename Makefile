@@ -15,4 +15,4 @@ testhorspool_LF: TestHorspool.cpp
 	clang++ -o testhorspool_LF TestHorspool.cpp -ldeepstate_LF -fsanitize=fuzzer
 
 testhorspool_AFL: TestHorspool.cpp
-	$AFL_HOME/afl-clang++ -o testhorspool_AFL TestHorspool.cpp -ldeepstate_AFL
+	${AFL_HOME}/afl-clang++ -o testhorspool_AFL TestHorspool.cpp -ldeepstate_AFL
