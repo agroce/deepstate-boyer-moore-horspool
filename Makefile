@@ -1,4 +1,4 @@
-FILES=testhorspool testhorspool_san testhorspool_LF testhorspool_AFL
+FILES=testhorspool testhorspool_cov testhorspool_san testhorspool_LF testhorspool_AFL
 
 all: $(FILES)
 
