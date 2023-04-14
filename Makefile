@@ -7,6 +7,9 @@ clean:
 
 testhorspool: TestHorspool.cpp
 	clang++ -o testhorspool TestHorspool.cpp -ldeepstate
+	
+testhorspool_cov: TestHorspool.cpp
+	clang++ -o testhorspool TestHorspool.cpp -ldeepstate --coverage
 
 testhorspool_san: TestHorspool.cpp
 	clang++ -o testhorspool_san TestHorspool.cpp -ldeepstate -fsanitize=address,undefined
