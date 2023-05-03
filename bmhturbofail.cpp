@@ -6,8 +6,8 @@ int main() {
   size_t needle_length = 17;
   size_t haystack_length = 256;
 
-  unsigned char* needle[1024];
-  unsigned char* haystack[1024];
+  unsigned char needle[1024];
+  unsigned char haystack[1024];
   
   needle[0] = 255;
   needle[1] = 255;
