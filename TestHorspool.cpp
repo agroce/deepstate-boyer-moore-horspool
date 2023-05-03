@@ -55,8 +55,8 @@ TEST(Horspool, Differential) {
   size_t BM_result = (int) SearchIn(haystack, haystack_length, occ, skip, needle, needle_length);
   size_t Turbo_result = (int) SearchInTurbo(haystack, haystack_length, occ, skip, needle, needle_length);
   char *strnstr_ptr = strnstr((const char*)haystack, (const char*)needle, haystack_length);
-  ASSERT (BMH_result == BM_result) << "Boyer-Moore-Horspool: " <<  BMH_result << " vs. Boyer-Moore" << BM_result;
-  ASSERT (BM_result == Turbo_result) << "Boyer-Moore: " <<  BM_result << " vs. Turbo" << Turbo_result;
+  ASSERT (BMH_result == BM_result) << "Boyer-Moore-Horspool: " <<  BMH_result << " vs. Boyer-Moore: " << BM_result;
+  ASSERT (BM_result == Turbo_result) << "Boyer-Moore: " <<  BM_result << " vs. Turbo: " << Turbo_result;
   if (strnstr_ptr == NULL) {
     ASSERT (BMH_result == haystack_length) <<
       "strnstr did not find, but Boyer-Moore-Horspool returned " << BMH_result;
