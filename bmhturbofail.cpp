@@ -1,3 +1,7 @@
+#include <cstring.h>
+#include <stdio.h>
+#include <assert.h>
+
 #include "Horspool.cpp"
 #include "BoyerMooreAndTurbo.cpp"
 
@@ -26,7 +30,7 @@ int main() {
   needle[14] = 16;
   needle[15] = 16;
   needle[16] = 16;
-  needle[17] = 0
+  needle[17] = 0;
   haystack[0] = 1;
   haystack[1] = 1;
   haystack[2] = 1;
