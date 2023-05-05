@@ -295,8 +295,8 @@ int main() {
   size_t BMH_result = (int) SearchInHorspool(haystack, haystack_length, occ, needle, needle_length);
   size_t Turbo_result = (int) SearchInTurbo(haystack, haystack_length, occ, skip, needle, needle_length);
 
-  printf("BMH: %zu", BMH_result);
-  printf("Turbo: %zu", Turbo_result);
+  printf("BMH: %zu\n", BMH_result);
+  printf("Turbo: %zu\n", Turbo_result);
   
   assert(BMH_result == Turbo_result);
 }
