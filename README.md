@@ -6,14 +6,4 @@ The file bmhturbofail.cpp is an example of a [real bug](https://github.com/FooBa
 
 It looks as if the bug is not local to the FooBarWidget implementation; it's a bad shift introduced in the C implementation by the original Turbo BM authors, though not present in their pseudocode. Needle dccacdcc, haystack abcbadccdccacdcc exposes the bug nicely in [the authors' C version](http://www-igm.univ-mlv.fr/~lecroq/string/node15.html#SECTION00150) [linked to by NIST](https://xlinux.nist.gov/dads/HTML/turboBM.html).
 
-The conservative fix is to delete only the if and its body in this code, keeping the reset of u:
-
-~~~~~~
-         else {
-           if (turboShift < bcShift)          // delete
-              shift = MAX(shift, u + 1);      // delete
-           u = 0;                             // keep
-         }
-~~~~~~
-
-Changing u + 1 to v + 1 is also possibly right, and sources the bug to a transcription error, but is less safe.
+See my [bug report to MariaDB](https://jira.mariadb.org/browse/MDEV-42279) for details and some history on this interesting little piece of code, which includes some reasonable fixes.
