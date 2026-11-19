@@ -7,3 +7,5 @@ The file bmhturbofail.cpp is an example of a [real bug](https://github.com/FooBa
 It looks as if the bug is not local to the FooBarWidget implementation; it's a bad shift introduced in the C implementation by the original Turbo BM authors, though not present in their pseudocode. Needle dccacdcc, haystack abcbadccdccacdcc exposes the bug nicely in [the authors' C version](http://www-igm.univ-mlv.fr/~lecroq/string/node15.html#SECTION00150) [linked to by NIST](https://xlinux.nist.gov/dads/HTML/turboBM.html).
 
 See my [bug report to MariaDB](https://jira.mariadb.org/browse/MDEV-42279) for details and some history on this interesting little piece of code, which includes some reasonable fixes.
+
+I received a fixed version very quickly from Thierry Lecroq, once I brought this matter to his attention, which will now be posted online and in SMART. It has passed a large number of tests and partial proof (see the verification subdirectory) and I think there is very little chance it has any problems.
