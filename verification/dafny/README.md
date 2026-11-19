@@ -6,13 +6,13 @@ of length at least 1, every text, and every character value in `[0, 256)`.
 
 | File | What is proved | Verifies |
 |---|---|---|
-| `Horspool.dfy` | Boyer-Moore-Horspool: bad-character table built as in the handbook, and the search | 8 conditions, ~8 s |
-| `TurboBM.dfy` | Turbo-BM search with the `u + 1` floor removed (conservative fix) | 21 conditions, ~4 s |
-| `TurboBM_lecroq.dfy` | Turbo-BM search with Lecroq's November 2026 guarded floor | 24 conditions, ~4 s |
+| `Horspool.dfy` (module `Horspool`) | Boyer-Moore-Horspool: bad-character table built as in the handbook, and the search | 8 conditions, ~8 s |
+| `TurboBM.dfy` (module `TurboBMNoFloor`) | Turbo-BM search with the `u + 1` floor removed (conservative fix) | 21 conditions, ~4 s |
+| `TurboBM_lecroq.dfy` (module `TurboBMLecroq`) | Turbo-BM search with Lecroq's November 2026 guarded floor | 24 conditions, ~4 s |
 | `RunTests.dfy` | Runs the verified Turbo-BM on the known counterexamples | (executable) |
 
 ```
-dafny verify Horspool.dfy TurboBM.dfy TurboBM_lecroq.dfy
+dafny verify Horspool.dfy TurboBM.dfy TurboBM_lecroq.dfy    # 53 verified, 0 errors
 dafny run --no-verify --target:py RunTests.dfy     # or the default C# target if dotnet is installed
 ```
 
