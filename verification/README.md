@@ -22,6 +22,7 @@ full-match path, so for it the `dccacdcc` example below is the relevant one.
 | `tbm_harness.c` | CBMC harness for bounded model checking |
 | `run_cbmc.sh` | Runs CBMC on the harness with per-loop unwinding bounds |
 | `Makefile` | `make`, `make test`, `make cbmc-quick`, `make clean` |
+| `dafny/` | Dafny proofs of Horspool and of the Turbo-BM search (floor removed, and Lecroq's fix); see `dafny/README.md` |
 
 ## Random tester
 

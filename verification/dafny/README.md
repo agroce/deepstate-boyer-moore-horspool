@@ -33,7 +33,7 @@ Each search method has the postcondition `res == Occurrences(x, y)`, where
   linear-time `suffixes`/`preBmGs` is **not** verified here; it agrees with the
   specification on all 9.26M table entries for patterns up to length 12 over
   2 and 3 letter alphabets (checked exhaustively in C), and the CBMC harness in
-  `../verification` covers it within its bounds.
+  `..` (the parent `verification` directory) covers it within its bounds.
 - Results are sets of positions rather than the C code's `OUTPUT(j)` calls or
   counts.
 
